@@ -1,7 +1,7 @@
 import Tag from '@/components/tags/Tag'
 import { RoughNotation } from 'react-rough-notation'
 
-const INTERESTED_TECH_TAGS = ['cosmos-network', 'Cryptography']
+const INTERESTED_TECH_TAGS = ['Java', 'JavaScript','Vue']
 
 const IntroduceTextWrapper = () => {
   return (
