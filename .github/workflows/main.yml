@@ -28,8 +28,11 @@ jobs:
         run: yarn install
 
       # 步骤 4：构建项目
-      - name: Build project
-        run: yarn build # 替换为你的构建命令，如 yarn run build:prod
+      - name: Build static site
+        run: |
+          export EXPORT=1
+          export UNOPTIMIZED=1
+          yarn build
 
       - name: Show build output
         run: ls -al
