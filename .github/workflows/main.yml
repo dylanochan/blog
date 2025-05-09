@@ -38,7 +38,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: 'dist/' # 构建输出的目录，替换为你的输出目录
+          SOURCE: 'out/' # 构建输出的目录，替换为你的输出目录
           TARGET: ${{ secrets.TARGET_PATH }} # 服务器上的目标路径
           ARGS: '-avzr --delete' # rsync 参数，同步文件并删除目标目录中多余的文件
 
