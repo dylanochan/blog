@@ -31,6 +31,9 @@ jobs:
       - name: Build project
         run: yarn build # 替换为你的构建命令，如 yarn run build:prod
 
+      - name: Show build output
+        run: ls -al
+
       # 步骤 5：部署到云服务器
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v4
