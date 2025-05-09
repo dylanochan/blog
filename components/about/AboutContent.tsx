@@ -28,16 +28,8 @@ export default function AboutContent() {
 }
 
 const ChineseContent = () => {
-  return (
-    <div>
-      我将稍后介绍自己。
-    </div>
-  )
+  return <div>我将稍后介绍自己。</div>
 }
 const EnglishContent = () => {
-  return (
-    <div>
-      I will introduce myself later.
-    </div>
-  )
+  return <div>I will introduce myself later.</div>
 }
