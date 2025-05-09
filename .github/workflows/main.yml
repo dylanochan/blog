@@ -35,10 +35,10 @@ jobs:
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          remote-user: ${{ secrets.REMOTE_USER }}
-          server-ip: ${{ secrets.REMOTE_HOST }}
-          remote-path: ${{ secrets.TARGET_PATH }}
-          local-path: dist
-          args: '-avzr --delete'
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: 47.100.251.68
+          REMOTE_USER: root
+          SOURCE: 'dist/' # 构建输出的目录，替换为你的输出目录
+          TARGET: var/www/blog # 服务器上的目标路径
+          ARGS: '-avzr --delete' # rsync 参数，同步文件并删除目标目录中多余的文件
 
